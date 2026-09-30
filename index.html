@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alison Páez 💜 | Mi Espacio Mágico</title>
+  <meta name="description" content="Página personal de Alison Páez - Grado 11 Colegio María Currea Manrique. Futura Odontóloga, amante del morado, la playa, las salchipapas y mamá humana de Zoe.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💜</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background decorative light orbs -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+
+  <!-- Canvas for floating particles / hearts / stars -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-emoji">✨</span>
+        <span class="logo-text">Alison<span class="text-purple">.Páez</span></span>
+        <span class="heart-badge">💜</span>
+      </a>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="#sobre-mi" class="nav-link"><i class="fa-solid fa-user-astronaut"></i> Sobre Mí</a>
+        <a href="#personas-especiales" class="nav-link"><i class="fa-solid fa-heart"></i> Personas Especiales</a>
+        <a href="#zoe" class="nav-link"><i class="fa-solid fa-paw"></i> Zoe</a>
+        <a href="#pasiones" class="nav-link"><i class="fa-solid fa-fire"></i> Mis Pasiones</a>
+        <a href="#carrera" class="nav-link highlight-link"><i class="fa-solid fa-tooth"></i> Mi Carrera</a>
+        <a href="#buzon" class="nav-link"><i class="fa-solid fa-envelope-open-text"></i> Buzón</a>
+      </div>
+
+      <div class="nav-actions">
+        <button id="sparkle-btn" class="btn-icon" title="Lanzar brillos morados ✨" aria-label="Efecto de brillos">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </button>
+        <button id="audio-toggle-btn" class="btn-icon" title="Sonido ambiente chill" aria-label="Música ambiental">
+          <i class="fa-solid fa-music"></i>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>Colegio María Currea Manrique • Grado 11</span>
+            <span class="badge-tag">Promo 2026 🎓</span>
+          </div>
+
+          <h1 class="hero-title">
+            ¡Hola, soy <span class="gradient-text">Alison Páez</span>!
+            <span class="wave-hand">👋✨</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Bienvenido a mi rinconcito digital lleno de amor, sueños en grande, color 
+            <strong class="color-badge purple">morado</strong> y <strong class="color-badge black">negro</strong>, 
+            mi pasión por la futura <span class="underline-glow">odontología</span> y las personas que iluminan mi vida.
+          </p>
+
+          <div class="hero-features-chips">
+            <span class="chip"><i class="fa-solid fa-umbrella-beach"></i> Playa & Atardeceres</span>
+            <span class="chip"><i class="fa-solid fa-utensils"></i> Salchipapa Lover</span>
+            <span class="chip"><i class="fa-solid fa-paw"></i> Mamá humana de Zoe</span>
+            <span class="chip"><i class="fa-solid fa-tooth"></i> Futura Dra. Páez</span>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#personas-especiales" class="btn btn-primary">
+              <span>Conocer a mis personas especiales</span>
+              <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#carrera" class="btn btn-secondary">
+              <span>Mi carrera soñada</span>
+              <i class="fa-solid fa-tooth"></i>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">11°</span>
+              <span class="stat-label">Grado Actual</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Vibra Positiva</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Amor por Zoe & Familia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="image-card-wrapper">
+            <div class="glowing-border"></div>
+            <div class="hero-image-card">
+              <img src="assets/images/alison.png" alt="Alison Páez hermosa selfie" class="hero-img">
+              <div class="image-overlay-info">
+                <h3>Alison Páez</h3>
+                <p>Soñadora • Auténtica • Sonriente 💜</p>
+              </div>
+            </div>
+
+            <!-- Floating mini badges -->
+            <div class="floating-badge badge-top-right animate-float-slow">
+              <span class="fb-icon">🦷</span>
+              <div class="fb-text">
+                <small>Meta:</small>
+                <strong>Odontología</strong>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-left animate-float">
+              <span class="fb-icon">🐾</span>
+              <div class="fb-text">
+                <small>Incondicional:</small>
+                <strong>Mi perrita Zoe</strong>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-top-left animate-float-reverse">
+              <span class="fb-icon">🍟</span>
+              <div class="fb-text">
+                <small>Comida fav:</small>
+                <strong>Salchipapa</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ SECTION -->
+    <section class="section about-section" id="sobre-mi">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-sparkles"></i> Un pedacito de mí</span>
+          <h2 class="section-title">¿Quién es <span class="gradient-text">Alison?</span></h2>
+          <p class="section-desc">
+            Actualmente estoy cursando mi último año escolar en el colegio 
+            <strong>María Currea Manrique</strong>. Un año lleno de retos, emociones y muchas metas por cumplir.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          
+          <div class="glass-card about-main-card">
+            <div class="card-icon-bubble">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>Colegio María Currea Manrique</h3>
+            <p class="about-p">
+              Estar en <strong>Grado 11</strong> significa cerrar una etapa inolvidable para comenzar a construir mi futuro. 
+              En el colegio he aprendido valores, he forjado recuerdos increíbles junto a mis amigos y he descubierto 
+              mi verdadera vocación por servir y ayudar a otros.
+            </p>
+            <div class="about-tags">
+              <span class="tag-pill"><i class="fa-solid fa-school"></i> Promo 2026</span>
+              <span class="tag-pill"><i class="fa-solid fa-book-open"></i> Grado 11</span>
+              <span class="tag-pill"><i class="fa-solid fa-star"></i> Excelencia & Sueños</span>
+            </div>
+          </div>
+
+          <div class="glass-card aesthetic-palette-card">
+            <div class="card-icon-bubble">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <h3>Mis Colores Predilectos</h3>
+            <p class="about-p">
+              El <strong>morado</strong> simboliza mi magia, creatividad, intuición y energía bonita; mientras que el 
+              <strong>negro</strong> aporta ese toque de elegancia, fuerza, misterio y carácter que tanto me gusta.
+            </p>
+            <div class="color-swatches">
+              <div class="swatch-item">
+                <div class="swatch-circle purple-swatch"></div>
+                <span>Morado Mágico</span>
+              </div>
+              <div class="swatch-item">
+                <div class="swatch-circle black-swatch"></div>
+                <span>Negro Elegante</span>
+              </div>
+              <div class="swatch-item">
+                <div class="swatch-circle lavender-swatch"></div>
+                <span>Lavanda Chic</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card quote-card">
+            <div class="card-icon-bubble">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <p class="handwriting-quote">
+              "Todo lo que hagas con amor, dedicación y una gran sonrisa, siempre florecerá."
+            </p>
+            <span class="quote-author">— Mi lema de vida ✨</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PERSONAS ESPECIALES SECTION -->
+    <section class="section special-people-section" id="personas-especiales">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag pink-tag"><i class="fa-solid fa-heart"></i> Lazos que no se rompen</span>
+          <h2 class="section-title">Personas <span class="gradient-text">Especiales</span></h2>
+          <p class="section-desc">
+            Las personas que hacen de mi mundo un lugar infinitamente más feliz, brillante y lleno de amor.
+          </p>
+        </div>
+
+        <div class="special-people-grid">
+          
+          <!-- PRIMA CARD -->
+          <article class="glass-card person-card prima-card">
+            <div class="polaroid-wrapper">
+              <div class="tape-decor"></div>
+              <div class="polaroid-frame">
+                <img src="assets/images/prima.jpg" alt="Alison y su prima del alma" class="polaroid-img">
+                <div class="polaroid-caption">
+                  <span class="handwriting-text">Mi cómplice de vida & yo 💕</span>
+                  <button class="love-heart-btn" title="Dar amor a esta foto" aria-label="Me encanta">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="person-content">
+              <div class="person-header-title">
+                <span class="badge-role"><i class="fa-solid fa-crown"></i> La mejor persona del mundo</span>
+                <h3>Mi Prima Favorita</h3>
+              </div>
+
+              <p class="person-dedication">
+                "Mi prima es simplemente la persona más increíble, cariñosa y especial que existe en este planeta. 
+                La amo con todo mi ser. Con ella cada día tiene risas, confianza absoluta, apoyo incondicional y secretos 
+                que solo nosotras entendemos. Tenerla en mi vida es el regalo más hermoso de Dios."
+              </p>
+
+              <div class="memory-badges">
+                <span class="mini-tag">👯‍♀️ Inseparables</span>
+                <span class="mini-tag">🔒 Confianza nivel 1000%</span>
+                <span class="mini-tag">✨ Amor infinito</span>
+              </div>
+
+              <div class="card-action-bar">
+                <button class="btn btn-sm btn-outline send-love-btn" data-target="prima">
+                  <i class="fa-solid fa-heart-pulse"></i> ¡Te Amo Prima! (Enviar Amor)
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- AMIGOS CARD -->
+          <article class="glass-card person-card amigos-card">
+            <div class="polaroid-wrapper">
+              <div class="tape-decor"></div>
+              <div class="polaroid-frame">
+                <img src="assets/images/amigos.png" alt="Alison con sus amigos locos e incondicionales" class="polaroid-img">
+                <div class="polaroid-caption">
+                  <span class="handwriting-text">Mis amigos del alma 🤪✌️</span>
+                  <button class="love-heart-btn" title="Dar amor a esta foto" aria-label="Me encanta">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="person-content">
+              <div class="person-header-title">
+                <span class="badge-role"><i class="fa-solid fa-user-group"></i> Hermanos de vida</span>
+                <h3>Mis Amigos Incondicionales</h3>
+              </div>
+
+              <p class="person-dedication">
+                "¡Ellos son mi escape a las risas descontroladas, las mejores locuras y momentos que guardo en lo más profundo de mi corazón! 
+                Gracias por estar siempre a mi lado, por las charlas interminables, los momentos espontáneos, los días difíciles que se vuelven alegres 
+                y por brindarme un cariño tan sincero y leal. ¡Tener amigos como ustedes vale oro puro!"
+              </p>
+
+              <div class="memory-badges">
+                <span class="mini-tag">🤪 Risas garantizadas</span>
+                <span class="mini-tag">🌟 Amistad verdadera</span>
+                <span class="mini-tag">🤝 Lealtad pura</span>
+              </div>
+
+              <div class="card-action-bar">
+                <button class="btn btn-sm btn-outline send-love-btn" data-target="amigos">
+                  <i class="fa-solid fa-sparkles"></i> Saludo a Mis Amigos ✨
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- APARTADO ZOE: LA PERRITA HERMOSA -->
+    <section class="section zoe-section" id="zoe">
+      <div class="container">
+        
+        <div class="glass-card zoe-showcase-card">
+          <div class="zoe-grid">
+            
+            <div class="zoe-visual">
+              <div class="zoe-glow-aura"></div>
+              <div class="zoe-image-container">
+                <img src="assets/images/zoe.jpg" alt="Zoe, la perrita hermosa con su moño rosado al sol" class="zoe-img">
+                <div class="zoe-badge-corner">
+                  <span>🐾 La Consentida</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="zoe-info">
+              <span class="section-tag purple-tag"><i class="fa-solid fa-paw"></i> El amor de cuatro patas</span>
+              <h2 class="zoe-title">Zoe <span class="gradient-text">Mi Princesa</span> 🐶💖</h2>
+              
+              <blockquote class="zoe-quote">
+                "Tengo una perrita hermosa que se llama Zoe y es lo mejor que me han dado en el mundo entero."
+              </blockquote>
+
+              <p class="zoe-desc">
+                Zoe no es solo una mascota, es mi pedacito de cielo en la tierra. Con su colita en el pelo, su ternura 
+                incomparable y su mirada dulce, tiene el don de hacerme sonreír incluso en los días más pesados. 
+                Es noble, juguetona, consentida y la dueña absoluta de la casa y de mi corazón.
+              </p>
+
+              <div class="zoe-stats-box">
+                <div class="zoe-stat">
+                  <span class="stat-emoji">🎀</span>
+                  <div>
+                    <strong>Estilo Único</strong>
+                    <small>Moñito rosa y carita tierna</small>
+                  </div>
+                </div>
+                <div class="zoe-stat">
+                  <span class="stat-emoji">❤️</span>
+                  <div>
+                    <strong>Nivel de Ternura</strong>
+                    <small>Infinito (1000/100)</small>
+                  </div>
+                </div>
+                <div class="zoe-stat">
+                  <span class="stat-emoji">✨</span>
+                  <div>
+                    <strong>Superpoder</strong>
+                    <small>Llenar mi vida de felicidad pura</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="zoe-interact">
+                <button id="pet-zoe-btn" class="btn btn-primary btn-zoe">
+                  <i class="fa-solid fa-bone"></i> Acariciar a Zoe virtualmente 🐾
+                </button>
+                <span id="pet-counter" class="pet-counter-text">¡Zoe ha recibido <strong id="pet-count">12</strong> caricias hoy!</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MIS PASIONES (PLAYA & SALCHIPAPA) -->
+    <section class="section passions-section" id="pasiones">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-heart-pulse"></i> Cosas que me alegran el alma</span>
+          <h2 class="section-title">Mis Favoritos & <span class="gradient-text">Pasiones</span></h2>
+          <p class="section-desc">
+            Planes, sabores y lugares donde soy completamente feliz.
+          </p>
+        </div>
+
+        <div class="passions-grid">
+          
+          <!-- PLAYA CARD -->
+          <div class="glass-card passion-card beach-card">
+            <div class="passion-banner beach-banner">
+              <div class="passion-icon-float">🏖️</div>
+              <div class="wave-shape"></div>
+            </div>
+            <div class="passion-body">
+              <div class="passion-meta">
+                <span class="passion-cat"><i class="fa-solid fa-water"></i> Mi Lugar Soñado</span>
+                <h3>La Playa & El Mar 🌊☀️</h3>
+              </div>
+              <p>
+                Me fascina la playa con locura. Caminar por la arena, contemplar el horizonte con el atardecer, 
+                escuchar el sonido suave de las olas y sentir esa brisa salada que renueva la energía. Para mí, 
+                la playa es libertad, paz mental y pura alegría.
+              </p>
+              <div class="passion-details">
+                <span class="passion-pill"><i class="fa-solid fa-sun"></i> Atardeceres dorados</span>
+                <span class="passion-pill"><i class="fa-solid fa-wind"></i> Brisa marina</span>
+                <span class="passion-pill"><i class="fa-solid fa-camera"></i> Fotos mágicas</span>
+              </div>
+              <button class="btn btn-sm btn-outline beach-sound-btn" id="beach-sound-btn">
+                <i class="fa-solid fa-volume-high"></i> <span id="beach-btn-text">Escuchar sonido de olas 🌊</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- SALCHIPAPA CARD -->
+          <div class="glass-card passion-card food-card">
+            <div class="passion-banner food-banner">
+              <div class="passion-icon-float">🍟</div>
+              <div class="fry-glow"></div>
+            </div>
+            <div class="passion-body">
+              <div class="passion-meta">
+                <span class="passion-cat"><i class="fa-solid fa-heart"></i> Mi Comida Favorita</span>
+                <h3>¡Amo la Salchipapa! 🌭🍟</h3>
+              </div>
+              <p>
+                ¡No hay comida que se le compare! Un plato bien servido de salchipapas con papas crujientes, 
+                salchichitas doradas, queso derretido por encima, tocineta y todas las salsas habidas y por haber. 
+                Es el plan culinario perfecto para cualquier momento del día.
+              </p>
+              <div class="passion-details">
+                <span class="passion-pill"><i class="fa-solid fa-cheese"></i> Quesito derretido</span>
+                <span class="passion-pill"><i class="fa-solid fa-droplet"></i> Con todas las salsas</span>
+                <span class="passion-pill"><i class="fa-solid fa-utensils"></i> Felicidad garantizada</span>
+              </div>
+              
+              <!-- Salchipapa meter interactive -->
+              <div class="craving-box">
+                <div class="craving-header">
+                  <span>Antojo de Salchipapa hoy:</span>
+                  <strong class="craving-value" id="craving-val">1000%</strong>
+                </div>
+                <div class="craving-bar">
+                  <div class="craving-fill" style="width: 100%;"></div>
+                </div>
+                <button class="btn btn-sm btn-primary crave-more-btn" id="crave-btn">
+                  <i class="fa-solid fa-plus"></i> ¡Aumentar antojo! 🍟
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MI CARRERA DE ENSUEÑO: ODONTOLOGÍA -->
+    <section class="section career-section" id="carrera">
+      <div class="container">
+        
+        <div class="glass-card career-hero-card">
+          <div class="career-header-badge">
+            <i class="fa-solid fa-stethoscope"></i> Vocación & Futuro Profesional
+          </div>
+
+          <h2 class="career-main-title">
+            Mi Carrera de Ensueño: <span class="gradient-text">Odontología</span> 🦷✨
+          </h2>
+
+          <p class="career-lead">
+            Mi mayor anhelo al graduarme de 11° en el colegio María Currea Manrique es ingresar a la universidad 
+            para estudiar <strong>Odontología</strong> y convertirme en la <strong>Dra. Alison Páez</strong>.
+          </p>
+
+          <div class="career-pillars-grid">
+            
+            <div class="career-pillar">
+              <div class="pillar-icon">
+                <i class="fa-solid fa-smile-beam"></i>
+              </div>
+              <h4>Transformar Sonrisas</h4>
+              <p>
+                Una sonrisa es la carta de presentación de cualquier ser humano. Ayudar a las personas a sonreír con total 
+                seguridad, sin pena y con orgullo es mi mayor motivación.
+              </p>
+            </div>
+
+            <div class="career-pillar">
+              <div class="pillar-icon">
+                <i class="fa-solid fa-hand-holding-medical"></i>
+              </div>
+              <h4>Salud & Cuidado Humano</h4>
+              <p>
+                La salud oral es fundamental para el bienestar integral. Quiero ofrecer una atención cálida, empática y de 
+                confianza, eliminando el típico miedo al dentista.
+              </p>
+            </div>
+
+            <div class="career-pillar">
+              <div class="pillar-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <h4>Estética & Precisión</h4>
+              <p>
+                La odontología combina ciencia médica con arte. La precisión en cada detalle, la armonía facial y devolver la 
+                funcionalidad me apasionan por completo.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Doctor badge simulation / interactive -->
+          <div class="doctor-badge-container">
+            <div class="doctor-credential">
+              <div class="credential-ribbon">Futura Profesional</div>
+              <div class="credential-body">
+                <div class="cred-avatar">
+                  <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div class="cred-info">
+                  <h3>Dra. Alison Páez</h3>
+                  <p class="cred-title">Especialista en Diseñar Sonrisas Radiantes</p>
+                  <div class="cred-tags">
+                    <span>Odontología General</span>
+                    <span>Ortodoncia & Estética</span>
+                    <span>Empatía con Pacientes</span>
+                  </div>
+                </div>
+              </div>
+              <div class="credential-footer">
+                <span>Colegio María Currea Manrique ➔ Rumbo a la Universidad 🚀</span>
+              </div>
+            </div>
+            
+            <div class="smile-simulator-box">
+              <h4>¡Simulador de Sonrisa Radiante!</h4>
+              <p>Presiona el botón para realizar una limpieza y blanqueamiento virtual:</p>
+              <div class="teeth-graphic" id="teeth-display">
+                <span class="tooth-icon">🦷</span>
+                <span class="tooth-sparkle" id="tooth-shine">✨</span>
+              </div>
+              <button id="polish-smile-btn" class="btn btn-primary btn-sm">
+                <i class="fa-solid fa-sparkles"></i> Blanquear Sonrisa ✨
+              </button>
+              <p id="smile-msg" class="smile-feedback-text">¡Diente radiante listo para deslumbrar!</p>
+            </div>
+          </div>
+
+          <div class="career-quote">
+            <i class="fa-solid fa-quote-left"></i>
+            <span>"Detrás de cada sonrisa que ayudes a brillar, hay una persona que recuperó su confianza en el mundo."</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BUZÓN DE MENSAJES & DEDICATORIAS -->
+    <section class="section guestbook-section" id="buzon">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag pink-tag"><i class="fa-solid fa-envelope"></i> Muro de amor</span>
+          <h2 class="section-title">Buzón de <span class="gradient-text">Mensajitos</span> 💌</h2>
+          <p class="section-desc">
+            ¡Déjame una dedicatoria, saludo o mensaje bonito! Se guardará aquí en mi muro para siempre.
+          </p>
+        </div>
+
+        <div class="guestbook-container">
+          
+          <!-- Message Form -->
+          <div class="glass-card guestbook-form-card">
+            <h3>Escribirle a Alison 💜</h3>
+            <form id="guestbook-form">
+              <div class="form-group">
+                <label for="sender-name"><i class="fa-solid fa-user"></i> Tu Nombre o Apodo:</label>
+                <input type="text" id="sender-name" placeholder="Ej: Tu prima, Juanito, Tu mejor amiga..." required>
+              </div>
+
+              <div class="form-group">
+                <label for="sender-relation"><i class="fa-solid fa-heart"></i> Eres su:</label>
+                <select id="sender-relation">
+                  <option value="Prima / Familia">Prima / Familia 💕</option>
+                  <option value="Amigo(a) Incondicional">Amigo(a) Incondicional 🌟</option>
+                  <option value="Compañero(a) del Colegio">Compañero(a) del Colegio 🎒</option>
+                  <option value="Fan de Zoe">Fan de Zoe 🐾</option>
+                  <option value="Visitante Especial">Visitante Especial ✨</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="sender-message"><i class="fa-solid fa-comment-dots"></i> Tu Mensaje Cariñoso:</label>
+                <textarea id="sender-message" rows="4" placeholder="Escribe aquí tus palabras más lindas para Alison..." required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label><i class="fa-solid fa-icons"></i> Elige un Sticker/Emoji:</label>
+                <div class="emoji-picker" id="emoji-picker">
+                  <button type="button" class="emoji-btn active" data-emoji="💜">💜</button>
+                  <button type="button" class="emoji-btn" data-emoji="✨">✨</button>
+                  <button type="button" class="emoji-btn" data-emoji="🦷">🦷</button>
+                  <button type="button" class="emoji-btn" data-emoji="🐾">🐾</button>
+                  <button type="button" class="emoji-btn" data-emoji="🍟">🍟</button>
+                  <button type="button" class="emoji-btn" data-emoji="🏖️">🏖️</button>
+                  <button type="button" class="emoji-btn" data-emoji="🎓">🎓</button>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <span>Publicar en el Muro</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Messages Wall -->
+          <div class="messages-wall-wrapper">
+            <div class="wall-header">
+              <h3><i class="fa-solid fa-notes-medical"></i> Notas de Cariño Recientes</h3>
+              <span id="messages-count" class="badge-counter">4 notas</span>
+            </div>
+            
+            <div class="messages-grid" id="messages-grid">
+              <!-- Dynamically populated and preloaded notes -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="footer-logo">Alison Páez 💜</span>
+        <p>Colegio María Currea Manrique • Grado 11 • Futura Odontóloga</p>
+      </div>
+
+      <div class="footer-social-icons">
+        <a href="#hero" class="footer-icon-link" title="Inicio"><i class="fa-solid fa-arrow-up"></i></a>
+        <a href="#zoe" class="footer-icon-link" title="Zoe"><i class="fa-solid fa-paw"></i></a>
+        <a href="#carrera" class="footer-icon-link" title="Odontología"><i class="fa-solid fa-tooth"></i></a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Diseñado con amor en tonos morado y negro ✨ | &copy; 2026 Alison Páez. Todos los derechos reservados.</p>
+        <p class="footer-sweet-note">"La vida es mejor con salchipapas, la brisa de la playa y el amor de Zoe."</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING MUSIC & AUDIO CONTROLLER WIDGET -->
+  <div class="vibes-player" id="vibes-player">
+    <div class="player-pill">
+      <button id="player-play-btn" class="player-btn" aria-label="Reproducir ambiente">
+        <i class="fa-solid fa-play" id="play-icon"></i>
+      </button>
+      <div class="player-info">
+        <span class="player-song">Vibra Morada Chill 💜</span>
+        <span class="player-artist">Melodía Lofi & Relax</span>
+      </div>
+      <div class="sound-waves" id="sound-waves">
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Custom Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
